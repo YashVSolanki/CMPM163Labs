@@ -59,7 +59,7 @@
 
 			//three.js material cube
 			var geometry3 = new THREE.BoxGeometry();
-  			var material3 = new THREE.MeshToonMaterial( { color: 0xaa0000, emmisive: 0x0000bb,emmisiveIntensity: 9, wireframe: true});
+  			var material3 = new THREE.MeshLambertMaterial( { color: 0xaa1111, emissive: 0xffffff,emissiveIntensity: .3, wireframe: true});
 
   			var cube3 = new THREE.Mesh( geometry3, material3 );
   			cube3.position.x = 2;
