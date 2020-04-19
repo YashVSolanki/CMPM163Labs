@@ -18,7 +18,7 @@
       			var renderer = new THREE.WebGLRenderer();
       			renderer.setSize(window.innerWidth, window.innerHeight);
       			document.body.appendChild(renderer.domElement);
-			camera.position.z = 5;
+			camera.position.z = 5.5;
 			
 			//------------------Cubes----------------------//
 
@@ -27,10 +27,46 @@
       			var material = new THREE.MeshPhongMaterial( { color: 0xeeeeee, specular: 0x00ff00, shininess: 30 });
 
       			var cube = new THREE.Mesh( geometry, material );
+      			cube.position.x = -2;
+      			cube.position.y = 2;
      			scene.add(cube);
 
+     		//coolCube
+     		var geometry1, material1, mesh1;
+
+			function addCoolCube() {
+				if(count == 2) {				
+					geometry1 = new THREE.BoxGeometry(1, 1, 1);
+					let uniforms = {
+							colorB: {type: 'vec3', value: new 
+					THREE.Color(0xFA0ADE)},
+							colorA: {type: 'vec3', value: new 
+					THREE.Color(0x345678)}
+					};
+
+					material1 =  new THREE.ShaderMaterial({
+							fragmentShader: fshader, 
+							uniforms: uniforms,
+							vertexShader: vshader,
+							precision: "mediump"});
+	
+					mesh1 = new THREE.Mesh(geometry1, material1);
+					mesh1.position.x = 2;
+					mesh1.position.y = 2;
+					scene.add(mesh1);
+				}	
+			}
+
+			//three.js material cube
+			var geometry3 = new THREE.BoxGeometry();
+  			var material3 = new THREE.MeshToonMaterial( { color: 0xaa0000, emmisive: 0x0000bb,emmisiveIntensity: 9, wireframe: true});
+
+  			var cube3 = new THREE.Mesh( geometry3, material3 );
+  			cube3.position.x = 2;
+  			cube3.position.y = -2;
+ 			scene.add(cube3);
      		//------------------Cubes----------------------//
-     		
+
 			// add the light
 			var light = new THREE.PointLight(0xffffff, 1, 1000);
 			light.position.set(10, 9.5, 10);
@@ -43,8 +79,20 @@
 				geometry.rotateX(0.01);
 				geometry.rotateY(0.01);
 				renderer.render(scene, camera);
+
+
+				if(geometry1) {
+					geometry1.rotateX(0.01);
+					geometry1.rotateY(0.01);
+				}
+
+				geometry3.rotateX(0.01);
+				geometry3.rotateY(0.01);
+
 			}
 			animate();
+
+
 			//file loader
 			THREE.Cache.enabled = true;
 			var count = 0;
@@ -59,7 +107,7 @@
 						console.log(data); // output the text to the console
 						vshader = data;
 						count += 1;
-						//addCoolCube(); // we will write this method
+						addCoolCube(); // we will write this method
 					},
 			// onProgress callback
 				function (xhr) {
@@ -76,7 +124,7 @@
 						console.log(data); // output the text to the console
 						fshader = data;
 						count += 1;
-						//addCoolCube(); // we will write this method
+						addCoolCube(); // we will write this method
 					},
 			// onProgress callback
 				function (xhr) {
