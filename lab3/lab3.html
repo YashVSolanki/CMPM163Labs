@@ -19,7 +19,8 @@
       			renderer.setSize(window.innerWidth, window.innerHeight);
       			document.body.appendChild(renderer.domElement);
 			camera.position.z = 5.5;
-			
+			   var clock = new THREE.Clock();
+			   var uniforms2;
 			//------------------Cubes----------------------//
 
 			// setup the cube
@@ -65,6 +66,37 @@
   			cube3.position.x = 2;
   			cube3.position.y = -2;
  			scene.add(cube3);
+
+ 			// my shader cube
+            
+ 			var geometry4, material4, mesh4;
+ 			function addMyCube() {
+				if(count == 2) {				
+					geometry4 = new THREE.BoxGeometry(1, 1, 1);
+					uniforms2 = {
+							colorA: {type: 'vec3', value: new 
+					THREE.Color(0xFF0000)},
+							colorB: {type: 'vec3', value: new 
+					THREE.Color(0x00FF00)},
+							colorC: {type: 'vec3', value: new 
+					THREE.Color(0x0000FF)},
+							time: {type: 'float', value: clock.getElapsedTime()}
+					};
+
+					material4 =  new THREE.ShaderMaterial({
+							fragmentShader: fshader2, 
+							uniforms: uniforms2,
+							vertexShader: vshader2,
+							precision: "mediump"});
+	
+					mesh4 = new THREE.Mesh(geometry4, material4);
+					mesh4.position.x = -2;
+					mesh4.position.y = -2;
+					scene.add(mesh4);
+				}	
+			}
+
+
      		//------------------Cubes----------------------//
 
 			// add the light
@@ -89,6 +121,13 @@
 				geometry3.rotateX(0.01);
 				geometry3.rotateY(0.01);
 
+                
+				if(geometry4) {
+					geometry4.rotateX(0.01);
+					geometry4.rotateY(0.01);
+					uniforms2.time.value = clock.getElapsedTime();
+				}
+
 			}
 			animate();
 
@@ -96,8 +135,9 @@
 			//file loader
 			THREE.Cache.enabled = true;
 			var count = 0;
+			var count2 = 0;
 			var loader = new THREE.FileLoader();
-			var fshader, vshader;
+			var fshader, vshader, vshader2, fshader2;
 
 			//------------------Loaders----------------------//
 			//basic vertex
@@ -134,6 +174,46 @@
 				function (err) {
 					console.error('An error happened');
 				});
+
+
+			//my vertex********
+			loader.load('shaders/vertex2.vert',
+			// onLoad callback
+				function (data) {
+						console.log(data); // output the text to the console
+						vshader2 = data;
+						count2 += 1;
+						addMyCube(); // we will write this method
+					},
+			// onProgress callback
+				function (xhr) {
+					console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+				},
+			// onError callback
+				function (err) {
+					console.error('An error happened');
+				});
+
+			//my fragment********
+			loader.load('shaders/frag2.frag',
+			// onLoad callback
+				function (data) {
+						console.log(data); // output the text to the console
+						fshader2 = data;
+						count2 += 1;
+						addMyCube(); // we will write this method
+					},
+			// onProgress callback
+				function (xhr) {
+					console.log((xhr.loaded/xhr.total * 100)+ '% loaded');
+				},
+			// onError callback
+				function (err) {
+					console.error('An error happened');
+				});
+
+
+
 			//------------------Loaders----------------------//
 
 		</script>
