@@ -22,6 +22,13 @@
 ## Lab4
 
 [Lab4 Video](https://drive.google.com/file/d/1dzP2sAbAOifWZQALaElPy3QV8X_36Vm-/view?usp=sharing)
+
+Lab4 Image:  
+   Bottom Left: Three.js texture no normal.  
+   Bottom Middle: Three.js texture + normal.  
+   Bottom Right: Mismatching Three.js texture and normals.  
+   Top Middle: Texture through fragment shader.  
+   Top Right: Tiled texture using modulus(uVu/scale) times scale within the Texture2D function.
 ![](lab4/lab4_Image.png)
 
 24a. floor(u times 7)
