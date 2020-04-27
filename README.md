@@ -17,3 +17,13 @@
    Bottom Left: Color interpolation through all axis+time in a sine function between red, green, and blue.  
    Bottom Right: Wireframe with lambert material.  Peach color, and grey emmisive gives it two tones.  
  ![](lab3/lab3_Image.png)
+
+  
+## Lab4
+
+[Lab4 Video](https://drive.google.com/file/d/1dzP2sAbAOifWZQALaElPy3QV8X_36Vm-/view?usp=sharing)
+![](lab4/lab4_Image.png)
+
+24a. floor(u times 7)
+24b. floor(v times 7)
+24c. white
