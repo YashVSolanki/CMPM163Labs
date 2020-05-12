@@ -36,7 +36,7 @@ Lab4 Image:
 24c. white
 
 
-##Lab5
+## Lab5
 
 [Lab5 Video](https://drive.google.com/file/d/1YnSFsufs4y6aAzaPvmLBaPR80eY9wTwb/view?usp=sharing)
 
@@ -48,4 +48,26 @@ Lab5 Image:
   -Added smoke particle coming out of exhaust  
   -Changed track and checkpoints  
   -Added ramps  
-![](lab5/lab5_Image.png)
+![](lab5/lab5_Image.png)  
+
+
+## Lab6
+
+### Unity Lights:
+-Directional Light: A light that acts like the sun, it lights up the scene in 1 direction and its position does not matter.
+-Area Light: A BAKED light that shines in one direction.  Does not interact with real time lighting, nor non-static objects.
+-Point Light: A light that shines out in a sphere. Interacts with real time lighting.
+-Spotlight: A light that shines out in a cone. Interacts with real time lighting. Can use unity 2D cookies.
+
+### Unity Material:  
+-I tried imitating the material found on my Xbox One controller. I used a the standard specular shader and a simple "grainy" normal map.  After editing the normal map values and the material tiling I ended up with something fairly similar.
+![](lab6/Lab6_Image1.png)  
+![](lab6/Lab6_Image2.jpg)  
+
+### Unity Texture:
+- I created 2 textured objects using the textures and normal maps that I used in lab 4.  For the front left cube, I changed the tiling and put the normal map in the metalic AND normal map inputs in unity.  The front right cube is just a texture + normal from lab 4.
+
+### Unity Skybox:
+-This skybox is a night sky taken from the asset store that took multiple images of stars and put them onto a cubemap.
+
+![](lab6/Lab6_Image3.png) 
