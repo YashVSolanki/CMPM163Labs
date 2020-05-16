@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: VertexDisplacementmat
-  m_Shader: {fileID: -6465566751694194690, guid: b8bea278441a56d4381888d3a21eb45d,
+  m_Name: wave2
+  m_Shader: {fileID: -6465566751694194690, guid: db3d2ef0b9224db4f9cdd2a1d516bc32,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -75,7 +75,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
---- !u!114 &4267094874372288076
+--- !u!114 &8453127312247924413
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
