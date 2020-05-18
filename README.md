@@ -71,3 +71,16 @@ Lab5 Image:
 -This skybox is a night sky taken from the asset store that took multiple images of stars and put them onto a cubemap.
 
 ![](lab6/Lab6_Image3.png) 
+
+## Lab7
+
+[Lab7 Video](https://drive.google.com/file/d/1g-T8Pl7Zk60YR1EN17eN9PK-DUWbB9kP/view?usp=sharing)  
+![](lab7/Lab7_Image.png) 
+### How it was made  
+-The "mountian" range in the background was from the unity tutorial.  
+-The flag on the flagpole was created with the tutorial video.  
+-The grass was created with a seperate shader graph, implementing the untiy tutorial shader in a more simple way. Also created a simple grassy pattern using noise in the shader.  
+-The sand was created in a similar way, but without the mesh manipulation.  
+-The water was created by mesh manip in the shader graph, then applying voronoi noise, time and color to the albedo.  
+
+
