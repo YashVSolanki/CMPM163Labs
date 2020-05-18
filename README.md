@@ -83,4 +83,8 @@ Lab5 Image:
 -The sand was created in a similar way, but without the mesh manipulation.  
 -The water was created by mesh manip in the shader graph, then applying voronoi noise, time and color to the albedo.  
 
+### What my partner made  
+He made a much more full scene, but without textures or color. He added background noise, a water fall, and some simple particles.  The way the scene itself was constructed was very neat.  My partner used the HDRP while I used the URP.  
+-Note we did NOT help each other with any portion of the lab.
+
 
