@@ -72,7 +72,7 @@ Lab5 Image:
 
 ![](lab6/Lab6_Image3.png) 
 
-## Lab7
+## Lab 7
 
 [Lab7 Video](https://drive.google.com/file/d/1g-T8Pl7Zk60YR1EN17eN9PK-DUWbB9kP/view?usp=sharing)  
 ![](lab7/Lab7_Image.png) 
@@ -85,6 +85,18 @@ Lab5 Image:
 
 ### What my partner made  
 He made a much more full scene, but without textures or color. He added background noise, a water fall, and some simple particles.  The way the scene itself was constructed was very neat.  My partner used the HDRP while I used the URP.  
--Note we did NOT help each other with any portion of the lab.
+-Note we did NOT help each other with any portion of the lab.  
+
+
+## Lab 8  
+I used Minecraft as the inspiration for my generated city.  
+![](lab8/reference_mage.png)  
+
+What I made:  
+-The way height increases with distance from the water as well as simple terrain influenced how I made the terrain.  Using simple cubes of different sizes was my method of creating the tiles.
+
+![](lab8/Lab8_Image.png) 
+
+### Note: I was not able to contact my partner as of 5/26/2020 4:09PM 
 
 
